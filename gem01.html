@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แบบทดสอบชุดที่ 1: เรื่อง ไมโครคอนโทรลเลอร์</title>
+  <style>
+    body { font-family: 'Sarabun', sans-serif; margin: 20px; background-color: #f4f6f9; }
+    .container { max-width: 650px; background: white; padding: 25px; margin: auto; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .header { text-align: center; margin-bottom: 20px; }
+    .timer { font-size: 18px; color: #d9534f; font-weight: bold; text-align: right; margin-bottom: 15px; }
+    .question { margin-bottom: 15px; background: #fafafa; padding: 12px; border-radius: 5px; border-left: 4px solid #0275d8; }
+    .form-group { margin-bottom: 15px; }
+    label { font-weight: bold; display: block; margin-bottom: 5px; }
+    input[type="text"], select { width: 100%; padding: 8px; box-sizing: border-box; }
+    .options label { font-weight: normal; display: block; margin: 5px 0; cursor: pointer; }
+    button { background: #0275d8; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; cursor: pointer; width: 100%; }
+    button:disabled { background: #ccc; }
+    #result { text-align: center; font-size: 20px; color: #5cb85c; font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h2>แบบทดสอบชุดที่ 1: เรื่อง ไมโครคอนโทรลเลอร์</h2>
+    <p>จำนวน 5 ข้อ | ข้อละ 1 คะแนน | เวลา 5 นาที</p>
+  </div>
+
+  <form id="quizForm">
+    <div class="form-group">
+      <label>ชื่อ-นามสกุล ผู้สอบ:</label>
+      <input type="text" id="studentName" required placeholder="กรุณากรอกชื่อ-นามสกุล">
+    </div>
+
+    <div class="form-group">
+      <label>ระดับชั้น:</label>
+      <select id="studentLevel" required>
+        <option value="">-- กรุณาเลือกระดับชั้น --</option>
+        <option value="ม.1">มัธยมศึกษาปีที่ 1</option>
+        <option value="ม.2">มัธยมศึกษาปีที่ 2</option>
+        <option value="ม.3">มัธยมศึกษาปีที่ 3</option>
+        <option value="ม.4">มัธยมศึกษาปีที่ 4</option>
+        <option value="ม.5">มัธยมศึกษาปีที่ 5</option>
+        <option value="ม.6">มัธยมศึกษาปีที่ 6</option>
+        <option value="ปวช.">ปวช.</option>
+        <option value="ปวส.">ปวส.</option>
+      </select>
+    </div>
+
+    <hr style="margin: 20px 0;">
+
+    <div class="timer" id="timerDisplay">เวลาเหลือ: 05:00</div>
+
+    <!-- ข้อที่ 1 -->
+    <div class="question">
+      <p>1. ข้อใดคือหน้าที่หลักของไมโครคอนโทรลเลอร์ (Microcontroller)?</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="A"> A. เก็บข้อมูลจำนวนมากเหมือน Harddisk</label>
+        <label><input type="radio" name="q1" value="B"> B. ควบคุมอุปกรณ์ต่าง ๆ ตามโปรแกรมที่เขียนไว้</label>
+        <label><input type="radio" name="q1" value="C"> C. แสดงผลภาพความละเอียดสูง</label>
+        <label><input type="radio" name="q1" value="D"> D. ขยายสัญญาณเสียง</label>
+      </div>
+    </div>
+
+    <!-- ข้อที่ 2 -->
+    <div class="question">
+      <p>2. บอร์ดไมโครคอนโทรลเลอร์ยอดนิยมสำหรับการเริ่มต้นเรียนรู้คือบอร์ดใด?</p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="A"> A. Intel Core i9</label>
+        <label><input type="radio" name="q2" value="B"> B. Arduino UNO</label>
+        <label><input type="radio" name="q2" value="C"> C. Nvidia RTX 3080</label>
+        <label><input type="radio" name="q2" value="D"> D. Power Supply</label>
+      </div>
+    </div>
+
+    <!-- ข้อที่ 3 -->
+    <div class="question">
+      <p>3. พอร์ต GPIO ย่อมาจากคำว่าอะไร?</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="A"> A. General Purpose Input Output</label>
+        <label><input type="radio" name="q3" value="B"> B. Global Position Input Option</label>
+        <label><input type="radio" name="q3" value="C"> C. Graphic Process Input Output</label>
+        <label><input type="radio" name="q3" value="D"> D. General Power Internal Output</label>
+      </div>
+    </div>
+
+    <!-- ข้อที่ 4 -->
+    <div class="question">
+      <p>4. สัญญาณประเภทใดที่มีค่าเพียง 2 สภาวะ คือ HIGH (1) และ LOW (0)?</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="A"> A. สัญญาณแอนะล็อก (Analog)</label>
+        <label><input type="radio" name="q4" value="B"> B. สัญญาณดิจิทัล (Digital)</label>
+        <label><input type="radio" name="q4" value="C"> C. สัญญาณความถี่วิทยุ (RF)</label>
+        <label><input type="radio" name="q4" value="D"> D. สัญญาณเสียง (Audio)</label>
+      </div>
+    </div>
+
+    <!-- ข้อที่ 5 -->
+    <div class="question">
+      <p>5. อุปกรณ์ใดทำหน้าที่เป็น "อินพุต (Input)" ให้กับไมโครคอนโทรลเลอร์?</p>
+      <div class="options">
+        <label><input type="radio" name="q5" value="A"> A. หลอดไฟ LED</label>
+        <label><input type="radio" name="q5" value="B"> B.ลำโพง (Buzzer)</label>
+        <label><input type="radio" name="q5" value="C"> C. สวิตช์ปุ่มกด (Push Button Switch)</label>
+        <label><input type="radio" name="q5" value="D"> D.มอเตอร์ (DC Motor)</label>
+      </div>
+    </div>
+
+    <button type="button" id="submitBtn" onclick="submitQuiz()">ส่งแบบทดสอบ</button>
+  </form>
+
+  <div id="result"></div>
+</div>
+
+<script>
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwj6yK7LCtTc_90VHpl2GndYSnYGgUA-B94dksZIxwk_Q9ZVcNx8cnEL2yJ8k3QvBjs/exec";
+  const SHEET_NAME = "Sheet1";
+  const correctAnswers = { q1: "B", q2: "B", q3: "A", q4: "B", q5: "C" };
+  
+  let timeLeft = 300; // 5 นาที (300 วินาที)
+  let timerInterval = setInterval(updateTimer, 1000);
+
+  function updateTimer() {
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    document.getElementById("timerDisplay").innerText = `เวลาเหลือ: 0${minutes}:${seconds}`;
+    
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      alert("หมดเวลาทำแบบทดสอบ ระบบจะทำการส่งคำตอบให้อัตโนมัติ");
+      submitQuiz();
+    }
+    timeLeft--;
+  }
+
+  function submitQuiz() {
+    const name = document.getElementById("studentName").value.trim();
+    const level = document.getElementById("studentLevel").value;
+
+    if (!name || !level) {
+      alert("กรุณากรอกชื่อ-นามสกุล และเลือกระดับชั้นก่อนส่งแบบทดสอบ");
+      return;
+    }
+
+    clearInterval(timerInterval);
+    document.getElementById("submitBtn").disabled = true;
+    document.getElementById("submitBtn").innerText = "กำลังบันทึกข้อมูล...";
+
+    let scores = [];
+    let totalScore = 0;
+
+    for (let i = 1; i <= 5; i++) {
+      let selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+      if (selectedOption && selectedOption.value === correctAnswers[`q${i}`]) {
+        scores.push(1);
+        totalScore += 1;
+      } else {
+        scores.push(0);
+      }
+    }
+
+    const payload = {
+      sheetName: SHEET_NAME,
+      name: name,
+      level: level,
+      scores: scores,
+      totalScore: totalScore
+    };
+
+    fetch(WEB_APP_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+    .then(() => {
+      document.getElementById("quizForm").style.display = "none";
+      document.getElementById("result").innerHTML = `
+        ทำแบบทดสอบเสร็จสิ้น!<br>
+        คุณ <b>${name}</b> (${level})<br>
+        คะแนนรวมที่คุณได้: <span style="color: blue;">${totalScore} / 5</span> คะแนน
+      `;
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("เกิดข้อผิดพลาดในการส่งข้อมูล กรุณาลองใหม่อีกครั้ง");
+      document.getElementById("submitBtn").disabled = false;
+      document.getElementById("submitBtn").innerText = "ส่งแบบทดสอบ";
+    });
+  }
+</script>
+
+</body>
+</html>
